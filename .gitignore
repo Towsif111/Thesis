@@ -1,9 +1,8 @@
 # --- Raw datasets (large; download separately, see README) ---
 /GUIDE_Train.csv
 /GUIDE_Test.csv
-/GUIDE_Test.xlsx
 /GUIDE_Test_Queue_Rankings.csv
-/GUIDE_Test_Queue_Rankings.xlsx
+*.xlsx
 
 # --- Large derived/prediction files (per-row probabilities, split assignments) ---
 val_predictions.csv
