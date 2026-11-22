@@ -22,6 +22,19 @@ Each model has its own self-contained folder: a notebook, Kaggle kernel metadata
 
 Every notebook documents its own leakage review, feature set, and limitations inline (markdown cells); treat the notebooks themselves as the primary source of methodology detail.
 
+## Kaggle notebooks (live, run there)
+
+| Notebook | Kaggle link |
+|---|---|
+| EDA & preprocessing audit | https://www.kaggle.com/code/towsifhassan1132/guide-eda-preprocessing |
+| LightGBM baseline | https://www.kaggle.com/code/towsifhassan1132/guide-lightgbm-baseline |
+| Logistic Regression baseline | https://www.kaggle.com/code/towsifhassan1132/guide-logreg-baseline |
+| CatBoost baseline | https://www.kaggle.com/code/towsifhassan1132/guide-catboost-baseline |
+| XGBoost baseline | https://www.kaggle.com/code/towsifhassan1132/guide-xgboost-baseline |
+| Hybrid soft-voting ensemble | https://www.kaggle.com/code/towsifhassan1132/guide-hybrid-ensemble |
+
+These are **private** Kaggle kernels under the author's account — the links only resolve for someone logged into that account (or if later made public). The notebook source and its last completed run's outputs are mirrored in this repository regardless.
+
 ## How to run
 
 Each folder follows the same pattern:
