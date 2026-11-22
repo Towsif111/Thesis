@@ -1,0 +1,142 @@
+[{"stream_name":"stderr","time":9.80844172,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":9.808566627,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":11.167003763,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.167038734,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.167044344,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.167048355,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.982549475999999,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.982589097,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.982594384,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.982598510999999,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":17.220629371,"data":"Using DATA_DIR = /kaggle/input/datasets/Microsoft/microsoft-security-incident-prediction\n"}
+,{"stream_name":"stdout","time":17.220700146,"data":"['GUIDE_Test.csv', 'GUIDE_Test_Queue_Rankings.csv', 'GUIDE_Train.csv']\n"}
+,{"stream_name":"stderr","time":114.314420195,"data":"/tmp/ipykernel_16/20142253.py:2: DtypeWarning: Columns (10,11) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":114.314530093,"data":"  test = pd.read_csv(f'{DATA_DIR}/GUIDE_Test.csv')\n"}
+,{"stream_name":"stderr","time":114.314539615,"data":"\n"}
+,{"stream_name":"stderr","time":114.31454526,"data":"/tmp/ipykernel_16/20142253.py:2: DtypeWarning: Columns (10,11) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":114.314550312,"data":"  test = pd.read_csv(f'{DATA_DIR}/GUIDE_Test.csv')\n"}
+,{"stream_name":"stdout","time":118.073289101,"data":"Train shape: (9516837, 45)\n"}
+,{"stream_name":"stdout","time":118.073342106,"data":"Test shape: (4147992, 46)\n"}
+,{"stream_name":"stdout","time":118.073349339,"data":"Rankings shape: (9980, 3)\n"}
+,{"stream_name":"stdout","time":146.62151653,"data":"Memory usage (MB): 8273.99647\n"}
+,{"stream_name":"stdout","time":146.621575765,"data":"\u003cclass 'pandas.core.frame.DataFrame'\u003e\n"}
+,{"stream_name":"stdout","time":146.621584656,"data":"RangeIndex: 9516837 entries, 0 to 9516836\n"}
+,{"stream_name":"stdout","time":146.621589908,"data":"Data columns (total 45 columns):\n"}
+,{"stream_name":"stdout","time":146.621594765,"data":" #   Column              Dtype  \n"}
+,{"stream_name":"stdout","time":146.621599608,"data":"---  ------              -----  \n"}
+,{"stream_name":"stdout","time":146.621610527,"data":" 0   Id                  int64  \n"}
+,{"stream_name":"stdout","time":146.621615552,"data":" 1   OrgId               int64  \n"}
+,{"stream_name":"stdout","time":146.621620291,"data":" 2   IncidentId          int64  \n"}
+,{"stream_name":"stdout","time":146.62162493,"data":" 3   AlertId             int64  \n"}
+,{"stream_name":"stdout","time":146.621648727,"data":" 4   Timestamp           object \n"}
+,{"stream_name":"stdout","time":146.621653444,"data":" 5   DetectorId          int64  \n"}
+,{"stream_name":"stdout","time":146.621657059,"data":" 6   AlertTitle          int64  \n"}
+,{"stream_name":"stdout","time":146.621660627,"data":" 7   Category            object \n"}
+,{"stream_name":"stdout","time":146.621679897,"data":" 8   MitreTechniques     object \n"}
+,{"stream_name":"stdout","time":146.621683862,"data":" 9   IncidentGrade       object \n"}
+,{"stream_name":"stdout","time":146.621687897,"data":" 10  ActionGrouped       object \n"}
+,{"stream_name":"stdout","time":146.621691198,"data":" 11  ActionGranular      object \n"}
+,{"stream_name":"stdout","time":146.621695025,"data":" 12  EntityType          object \n"}
+,{"stream_name":"stdout","time":146.621698502,"data":" 13  EvidenceRole        object \n"}
+,{"stream_name":"stdout","time":146.621701797,"data":" 14  DeviceId            int64  \n"}
+,{"stream_name":"stdout","time":146.621705369,"data":" 15  Sha256              int64  \n"}
+,{"stream_name":"stdout","time":146.621709042,"data":" 16  IpAddress           int64  \n"}
+,{"stream_name":"stdout","time":146.621712595,"data":" 17  Url                 int64  \n"}
+,{"stream_name":"stdout","time":146.621716302,"data":" 18  AccountSid          int64  \n"}
+,{"stream_name":"stdout","time":146.621720023,"data":" 19  AccountUpn          int64  \n"}
+,{"stream_name":"stdout","time":146.621723515,"data":" 20  AccountObjectId     int64  \n"}
+,{"stream_name":"stdout","time":146.621725955,"data":" 21  AccountName         int64  \n"}
+,{"stream_name":"stdout","time":146.62172882,"data":" 22  DeviceName          int64  \n"}
+,{"stream_name":"stdout","time":146.621731213,"data":" 23  NetworkMessageId    int64  \n"}
+,{"stream_name":"stdout","time":146.621733508,"data":" 24  EmailClusterId      float64\n"}
+,{"stream_name":"stdout","time":146.621735797,"data":" 25  RegistryKey         int64  \n"}
+,{"stream_name":"stdout","time":146.621738355,"data":" 26  RegistryValueName   int64  \n"}
+,{"stream_name":"stdout","time":146.621740924,"data":" 27  RegistryValueData   int64  \n"}
+,{"stream_name":"stdout","time":146.62174334,"data":" 28  ApplicationId       int64  \n"}
+,{"stream_name":"stdout","time":146.62174576,"data":" 29  ApplicationName     int64  \n"}
+,{"stream_name":"stdout","time":146.621748055,"data":" 30  OAuthApplicationId  int64  \n"}
+,{"stream_name":"stdout","time":146.621750349,"data":" 31  ThreatFamily        object \n"}
+,{"stream_name":"stdout","time":146.621752714,"data":" 32  FileName            int64  \n"}
+,{"stream_name":"stdout","time":146.621755073,"data":" 33  FolderPath          int64  \n"}
+,{"stream_name":"stdout","time":146.621758413,"data":" 34  ResourceIdName      int64  \n"}
+,{"stream_name":"stdout","time":146.62176192,"data":" 35  ResourceType        object \n"}
+,{"stream_name":"stdout","time":146.621765463,"data":" 36  Roles               object \n"}
+,{"stream_name":"stdout","time":146.62176872,"data":" 37  OSFamily            int64  \n"}
+,{"stream_name":"stdout","time":146.621772281,"data":" 38  OSVersion           int64  \n"}
+,{"stream_name":"stdout","time":146.621775879,"data":" 39  AntispamDirection   object \n"}
+,{"stream_name":"stdout","time":146.621779752,"data":" 40  SuspicionLevel      object \n"}
+,{"stream_name":"stdout","time":146.621783583,"data":" 41  LastVerdict         object \n"}
+,{"stream_name":"stdout","time":146.621787103,"data":" 42  CountryCode         int64  \n"}
+,{"stream_name":"stdout","time":146.621790847,"data":" 43  State               int64  \n"}
+,{"stream_name":"stdout","time":146.621800919,"data":" 44  City                int64  \n"}
+,{"stream_name":"stdout","time":146.62180496,"data":"dtypes: float64(1), int64(30), object(14)\n"}
+,{"stream_name":"stdout","time":146.62180872,"data":"memory usage: 3.2+ GB\n"}
+,{"stream_name":"stdout","time":152.091993409,"data":"ResourceType         99.925658\n"}
+,{"stream_name":"stdout","time":152.092104121,"data":"ActionGrouped        99.410897\n"}
+,{"stream_name":"stdout","time":152.09211381,"data":"ActionGranular       99.410897\n"}
+,{"stream_name":"stdout","time":152.092117934,"data":"ThreatFamily         99.213173\n"}
+,{"stream_name":"stdout","time":152.092121697,"data":"EmailClusterId       98.982729\n"}
+,{"stream_name":"stdout","time":152.092125234,"data":"AntispamDirection    98.136965\n"}
+,{"stream_name":"stdout","time":152.092129038,"data":"Roles                97.707736\n"}
+,{"stream_name":"stdout","time":152.092132351,"data":"SuspicionLevel       84.825536\n"}
+,{"stream_name":"stdout","time":152.092136033,"data":"LastVerdict          76.523030\n"}
+,{"stream_name":"stdout","time":152.092139817,"data":"MitreTechniques      57.460120\n"}
+,{"stream_name":"stdout","time":152.092143226,"data":"IncidentGrade         0.539465\n"}
+,{"stream_name":"stdout","time":152.092146917,"data":"dtype: float64\n"}
+,{"stream_name":"stdout","time":193.165448667,"data":"Duplicate rows: 22559 (0.2370%)\n"}
+,{"stream_name":"stdout","time":239.240979158,"data":"Shape after dropping duplicates: (9494278, 45)\n"}
+,{"stream_name":"stdout","time":239.439010119,"data":"Dropping high-missing columns: ['ResourceType', 'ActionGrouped', 'ActionGranular', 'ThreatFamily', 'EmailClusterId', 'AntispamDirection', 'Roles']\n"}
+,{"stream_name":"stdout","time":266.213261702,"data":"Low-cardinality columns cast to category: ['Category', 'IncidentGrade', 'EntityType', 'EvidenceRole', 'SuspicionLevel', 'LastVerdict']\n"}
+,{"stream_name":"stdout","time":273.979480636,"data":"                  count    pct\n"}
+,{"stream_name":"stdout","time":273.979623816,"data":"IncidentGrade                 \n"}
+,{"stream_name":"stdout","time":273.979632686,"data":"BenignPositive  4110748  43.30\n"}
+,{"stream_name":"stdout","time":273.979637225,"data":"TruePositive    3302644  34.79\n"}
+,{"stream_name":"stdout","time":273.979641246,"data":"FalsePositive   2029564  21.38\n"}
+,{"stream_name":"stdout","time":273.979645862,"data":"NaN               51322   0.54\n"}
+,{"stream_name":"stdout","time":274.247044152,"data":"--- Category ---\n"}
+,{"stream_name":"stdout","time":274.247091991,"data":"Category\n"}
+,{"stream_name":"stdout","time":274.247099929,"data":"InitialAccess         4275023\n"}
+,{"stream_name":"stdout","time":274.247105209,"data":"Exfiltration          1577926\n"}
+,{"stream_name":"stdout","time":274.247109692,"data":"SuspiciousActivity    1003879\n"}
+,{"stream_name":"stdout","time":274.247114513,"data":"CommandAndControl      826691\n"}
+,{"stream_name":"stdout","time":274.247119001,"data":"Impact                 750885\n"}
+,{"stream_name":"stdout","time":274.247122829,"data":"CredentialAccess       298189\n"}
+,{"stream_name":"stdout","time":274.247127565,"data":"Execution              267594\n"}
+,{"stream_name":"stdout","time":274.247132032,"data":"Malware                142032\n"}
+,{"stream_name":"stdout","time":274.247136532,"data":"Discovery              129336\n"}
+,{"stream_name":"stdout","time":274.24714115,"data":"Persistence             72682\n"}
+,{"stream_name":"stdout","time":274.247145478,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":274.247149657,"data":"\n"}
+,{"stream_name":"stdout","time":274.247183125,"data":"--- EntityType ---\n"}
+,{"stream_name":"stdout","time":274.247187447,"data":"EntityType\n"}
+,{"stream_name":"stdout","time":274.24719116,"data":"Ip                   2175106\n"}
+,{"stream_name":"stdout","time":274.24719471,"data":"User                 1926333\n"}
+,{"stream_name":"stdout","time":274.247198285,"data":"MailMessage          1173140\n"}
+,{"stream_name":"stdout","time":274.247201496,"data":"Machine               698182\n"}
+,{"stream_name":"stdout","time":274.247204959,"data":"File                  687003\n"}
+,{"stream_name":"stdout","time":274.247208586,"data":"Url                   682562\n"}
+,{"stream_name":"stdout","time":274.24722351,"data":"CloudLogonRequest     632503\n"}
+,{"stream_name":"stdout","time":274.247226886,"data":"Mailbox               483152\n"}
+,{"stream_name":"stdout","time":274.24723027,"data":"Process               345730\n"}
+,{"stream_name":"stdout","time":274.247233466,"data":"MailCluster           224677\n"}
+,{"stream_name":"stdout","time":274.247237518,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":274.247241087,"data":"\n"}
+,{"stream_name":"stdout","time":274.247244786,"data":"--- EvidenceRole ---\n"}
+,{"stream_name":"stdout","time":274.247248119,"data":"EvidenceRole\n"}
+,{"stream_name":"stdout","time":274.247251848,"data":"Related     5193267\n"}
+,{"stream_name":"stdout","time":274.247255304,"data":"Impacted    4301011\n"}
+,{"stream_name":"stdout","time":274.247258856,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":274.247262306,"data":"\n"}
+,{"stream_name":"stderr","time":309.198419705,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":309.198475554,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":309.405867523,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":309.405913595,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":310.333903926,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":310.447169904,"data":"[NbConvertApp] Writing 323625 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":313.639314163,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":314.32088755,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":314.320917669,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":314.321141271,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":314.321394,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":314.321713553,"data":"[NbConvertApp] Writing 330389 bytes to __results__.html\n"}
+]

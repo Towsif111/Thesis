@@ -1,0 +1,81 @@
+[{"stream_name":"stderr","time":7.132264536,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.132336268,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.162130918,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.162177038,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.16218342,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.16218994,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.892274162,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.892312593,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.892318372,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.892322791,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":17.121097405,"data":"[    0.3s] Using DATA_DIR = /kaggle/input/datasets/Microsoft/microsoft-security-incident-prediction\n"}
+,{"stream_name":"stdout","time":104.068014568,"data":"[   87.2s] Loaded raw train = (9516837, 45)\n"}
+,{"stream_name":"stdout","time":156.290708681,"data":"[  139.0s] After dropping duplicate rows: (9494278, 45)\n"}
+,{"stream_name":"stdout","time":165.859524619,"data":"[  147.5s] After dropping rows with missing target: (9442956, 45)\n"}
+,{"stream_name":"stdout","time":165.859577815,"data":"Class distribution:\n"}
+,{"stream_name":"stdout","time":165.863894773,"data":"IncidentGrade\n"}
+,{"stream_name":"stdout","time":165.863967746,"data":"BenignPositive    4110748\n"}
+,{"stream_name":"stdout","time":165.863977841,"data":"TruePositive      3302644\n"}
+,{"stream_name":"stdout","time":165.863984049,"data":"FalsePositive     2029564\n"}
+,{"stream_name":"stdout","time":165.863989886,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":165.895382076,"data":"Excluded as identifiers/hashes: 25 ['Id', 'AlertId', 'DeviceId', 'Sha256', 'IpAddress', 'Url', 'AccountSid', 'AccountUpn', 'AccountObjectId', 'AccountName', 'DeviceName', 'NetworkMessageId', 'EmailClusterId', 'RegistryKey', 'RegistryValueName', 'RegistryValueData', 'ApplicationId', 'ApplicationName', 'OAuthApplicationId', 'ThreatFamily', 'FileName', 'FolderPath', 'ResourceIdName', 'OrgId', 'IncidentId']\n"}
+,{"stream_name":"stdout","time":165.89551198,"data":"Excluded as remediation-action leakage: ['ActionGrouped', 'ActionGranular']\n"}
+,{"stream_name":"stdout","time":165.895519925,"data":"Reviewed verdict columns kept (see note above): ['SuspicionLevel', 'LastVerdict']\n"}
+,{"stream_name":"stdout","time":165.895553203,"data":"Categorical features kept: 11 ['Category', 'EntityType', 'EvidenceRole', 'ResourceType', 'Roles', 'OSFamily', 'OSVersion', 'AntispamDirection', 'SuspicionLevel', 'LastVerdict', 'MitrePrimary']\n"}
+,{"stream_name":"stdout","time":165.895579434,"data":"Numeric features kept: 8 ['DetectorId', 'AlertTitle', 'CountryCode', 'State', 'City', 'Hour', 'DayOfWeek', 'MitreCount']\n"}
+,{"stream_name":"stdout","time":186.256840186,"data":"[  169.6s] Engineered features. Feature count: 19\n"}
+,{"stream_name":"stdout","time":186.256918365,"data":"['Category', 'EntityType', 'EvidenceRole', 'ResourceType', 'Roles', 'OSFamily', 'OSVersion', 'AntispamDirection', 'SuspicionLevel', 'LastVerdict', 'MitrePrimary', 'DetectorId', 'AlertTitle', 'CountryCode', 'State', 'City', 'Hour', 'DayOfWeek', 'MitreCount']\n"}
+,{"stream_name":"stdout","time":209.699336732,"data":"Target classes: {'BenignPositive': 0, 'FalsePositive': 1, 'TruePositive': 2}\n"}
+,{"stream_name":"stdout","time":209.737944559,"data":"[  193.1s] Encoded. X=(9442956, 19)\n"}
+,{"stream_name":"stdout","time":221.512750265,"data":"[  204.6s] Unique (OrgId, IncidentId) groups: 707108\n"}
+,{"stream_name":"stdout","time":506.906574576,"data":"[  490.0s] Split sizes -\u003e train=7518371 (79.6%), val=1924585 (20.4%); group overlap = 0\n"}
+,{"stream_name":"stdout","time":525.112024051,"data":"[  508.2s] Saved split_assignment.csv (9442956 rows)\n"}
+,{"stream_name":"stdout","time":534.103209313,"data":"[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 1.533579 seconds.\n"}
+,{"stream_name":"stdout","time":534.103296665,"data":"You can set `force_col_wise=true` to remove the overhead.\n"}
+,{"stream_name":"stdout","time":534.103307618,"data":"[LightGBM] [Info] Total Bins 1433\n"}
+,{"stream_name":"stdout","time":534.103314586,"data":"[LightGBM] [Info] Number of data points in the train set: 7518371, number of used features: 19\n"}
+,{"stream_name":"stdout","time":535.439683254,"data":"[LightGBM] [Info] Start training from score -0.826863\n"}
+,{"stream_name":"stdout","time":535.43975587,"data":"[LightGBM] [Info] Start training from score -1.537496\n"}
+,{"stream_name":"stdout","time":535.439765203,"data":"[LightGBM] [Info] Start training from score -1.056524\n"}
+,{"stream_name":"stdout","time":1817.637401608,"data":"[ 1801.0s] Training done in 1291.2s, best_iteration=1000\n"}
+,{"stream_name":"stdout","time":2050.194883647,"data":"                precision    recall  f1-score   support\n"}
+,{"stream_name":"stdout","time":2050.194952927,"data":"\n"}
+,{"stream_name":"stdout","time":2050.194958663,"data":"BenignPositive       0.77      0.93      0.84    822066\n"}
+,{"stream_name":"stdout","time":2050.194962431,"data":" FalsePositive       0.85      0.62      0.71    413727\n"}
+,{"stream_name":"stdout","time":2050.194965901,"data":"  TruePositive       0.85      0.77      0.81    688792\n"}
+,{"stream_name":"stdout","time":2050.194969455,"data":"\n"}
+,{"stream_name":"stdout","time":2050.194972675,"data":"      accuracy                           0.81   1924585\n"}
+,{"stream_name":"stdout","time":2050.194976186,"data":"     macro avg       0.82      0.77      0.79   1924585\n"}
+,{"stream_name":"stdout","time":2050.194979598,"data":"  weighted avg       0.81      0.81      0.80   1924585\n"}
+,{"stream_name":"stdout","time":2050.194983,"data":"\n"}
+,{"stream_name":"stdout","time":2050.194986195,"data":"Accuracy: 0.8060  Macro-F1: 0.7879  Weighted-F1: 0.8019\n"}
+,{"stream_name":"stdout","time":2050.194989582,"data":"Training time: 1291.2s\n"}
+,{"stream_name":"stdout","time":2051.055059618,"data":"[ 2034.4s] Saved lightgbm_model.pkl, preprocessing_info.json, results.json, split_assignment.csv\n"}
+,{"stream_name":"stdout","time":2051.05511234,"data":"{\n"}
+,{"stream_name":"stdout","time":2051.055121535,"data":"  \"dataset_rows_after_cleaning\": 9442956,\n"}
+,{"stream_name":"stdout","time":2051.055127074,"data":"  \"train_rows\": 7518371,\n"}
+,{"stream_name":"stdout","time":2051.055132138,"data":"  \"val_rows\": 1924585,\n"}
+,{"stream_name":"stdout","time":2051.055139204,"data":"  \"n_unique_groups\": 707108,\n"}
+,{"stream_name":"stdout","time":2051.055216463,"data":"  \"n_features\": 19,\n"}
+,{"stream_name":"stdout","time":2051.055222586,"data":"  \"training_time_seconds\": 1291.2,\n"}
+,{"stream_name":"stdout","time":2051.055226906,"data":"  \"best_iteration\": 1000,\n"}
+,{"stream_name":"stdout","time":2051.055231291,"data":"  \"accuracy\": 0.806,\n"}
+,{"stream_name":"stdout","time":2051.055245172,"data":"  \"macro_f1\": 0.7879,\n"}
+,{"stream_name":"stdout","time":2051.055249143,"data":"  \"weighted_f1\": 0.8019,\n"}
+,{"stream_name":"stdout","time":2051.055253198,"data":"  \"target_classes_order\": [\n"}
+,{"stream_name":"stdout","time":2051.055257014,"data":"    \"BenignPositive\",\n"}
+,{"stream_name":"stdout","time":2051.055260772,"data":"    \"FalsePositive\",\n"}
+,{"stream_name":"stdout","time":2051.055264685,"data":"    \"TruePositive\"\n"}
+,{"stream_name":"stdout","time":2051.055268831,"data":"  ]\n"}
+,{"stream_name":"stdout","time":2051.055272534,"data":"}\n"}
+,{"stream_name":"stderr","time":2058.002621657,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2058.002680216,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2058.227995148,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2058.228070171,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2059.211674857,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":2059.320021353,"data":"[NbConvertApp] Writing 93748 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":2062.940597896,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2063.683186,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":2063.683279746,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2063.683721098,"data":"[NbConvertApp] Writing 334568 bytes to __results__.html\n"}
+]

@@ -1,0 +1,50 @@
+# --- Raw datasets (large; download separately, see README) ---
+/GUIDE_Train.csv
+/GUIDE_Test.csv
+/GUIDE_Test.xlsx
+/GUIDE_Test_Queue_Rankings.csv
+/GUIDE_Test_Queue_Rankings.xlsx
+
+# --- Large derived/prediction files (per-row probabilities, split assignments) ---
+val_predictions.csv
+hybrid_val_predictions.csv
+lightgbm_val_predictions.csv
+split_assignment.csv
+*_predictions.csv
+
+# --- Large trained model files ---
+*.pkl
+*.cbm
+*.ubj
+*_model.json
+catboost_snapshot
+
+# --- Training caches / temporary files ---
+catboost_info/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.tmp
+*.bak
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Credentials and secrets ---
+.env
+.env.*
+kaggle.json
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# --- Editor / OS ---
+.DS_Store
+Thumbs.db
+
+# --- Local assistant/session config (not part of the ML project) ---
+.claude/

@@ -1,0 +1,13 @@
+{
+  "weights": {
+    "lightgbm": 0.3333333333333333,
+    "catboost": 0.3333333333333333,
+    "xgboost": 0.3333333333333333
+  },
+  "method": "equal-weight soft voting (no tuning performed)",
+  "class_order": [
+    "BenignPositive",
+    "FalsePositive",
+    "TruePositive"
+  ]
+}

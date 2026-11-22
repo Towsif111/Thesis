@@ -1,0 +1,14 @@
+{
+  "id": "towsifhassan1132/guide-logreg-baseline",
+  "title": "Guide LogReg Baseline",
+  "code_file": "guide_logreg.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": ["microsoft/microsoft-security-incident-prediction"],
+  "competition_sources": [],
+  "kernel_sources": ["towsifhassan1132/guide-lightgbm-baseline"]
+}

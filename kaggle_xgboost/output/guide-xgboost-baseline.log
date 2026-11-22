@@ -1,0 +1,128 @@
+[{"stream_name":"stderr","time":9.053735945,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":9.053814881,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":10.456506626,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.456574717,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.456581369,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.456586171,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.389832122,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.389883099,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.389888045,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.389891391,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":17.154440665,"data":"[    0.0s] Installed xgboost version: 3.4.1\n"}
+,{"stream_name":"stdout","time":17.738606507,"data":"[    0.4s] Using DATA_DIR = /kaggle/input/datasets/Microsoft/microsoft-security-incident-prediction\n"}
+,{"stream_name":"stdout","time":88.237352658,"data":"[   70.9s] Loaded raw train = (9516837, 45)\n"}
+,{"stream_name":"stdout","time":135.330532789,"data":"[  117.6s] After dropping duplicate rows: (9494278, 45)\n"}
+,{"stream_name":"stdout","time":141.391626899,"data":"[  123.7s] After dropping rows with missing target: (9442956, 45)\n"}
+,{"stream_name":"stdout","time":142.160805242,"data":"Class distribution:\n"}
+,{"stream_name":"stdout","time":142.16086333,"data":"IncidentGrade\n"}
+,{"stream_name":"stdout","time":142.160869938,"data":"BenignPositive    4110748\n"}
+,{"stream_name":"stdout","time":142.160875165,"data":"TruePositive      3302644\n"}
+,{"stream_name":"stdout","time":142.160880108,"data":"FalsePositive     2029564\n"}
+,{"stream_name":"stdout","time":142.160885123,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":142.355773963,"data":"[  125.2s] Loaded preprocessing_info.json from /kaggle/input/notebooks/towsifhassan1132/guide-lightgbm-baseline/preprocessing_info.json\n"}
+,{"stream_name":"stdout","time":142.355818915,"data":"Categorical features (reused): 11 ['Category', 'EntityType', 'EvidenceRole', 'ResourceType', 'Roles', 'OSFamily', 'OSVersion', 'AntispamDirection', 'SuspicionLevel', 'LastVerdict', 'MitrePrimary']\n"}
+,{"stream_name":"stdout","time":142.355829528,"data":"Numeric features (reused): 8 ['DetectorId', 'AlertTitle', 'CountryCode', 'State', 'City', 'Hour', 'DayOfWeek', 'MitreCount']\n"}
+,{"stream_name":"stdout","time":142.355835846,"data":"Excluded as identifiers/hashes: 25\n"}
+,{"stream_name":"stdout","time":142.355840899,"data":"Excluded as remediation-action leakage: ['ActionGrouped', 'ActionGranular']\n"}
+,{"stream_name":"stdout","time":142.355846011,"data":"Total reused features: 19\n"}
+,{"stream_name":"stdout","time":146.392367304,"data":"[  129.2s] Dropped unused raw columns: 46 -\u003e 22 columns, 9442956 rows unchanged\n"}
+,{"stream_name":"stdout","time":166.647227401,"data":"[  149.5s] Engineered features. Feature count: 19\n"}
+,{"stream_name":"stdout","time":171.103487991,"data":"[  153.7s] Loaded split_assignment.csv from /kaggle/input/notebooks/towsifhassan1132/guide-lightgbm-baseline/split_assignment.csv (9442956 rows)\n"}
+,{"stream_name":"stdout","time":177.163582696,"data":"[  157.5s] Row alignment verified: every cleaned row received exactly one split label.\n"}
+,{"stream_name":"stdout","time":187.315632208,"data":"[  169.9s] (OrgId, IncidentId) group overlap between train/val = 0 (verified zero)\n"}
+,{"stream_name":"stdout","time":189.783863727,"data":"split  IncidentGrade \n"}
+,{"stream_name":"stdout","time":189.78390713,"data":"train  BenignPositive    3288682\n"}
+,{"stream_name":"stdout","time":189.783914795,"data":"       TruePositive      2613852\n"}
+,{"stream_name":"stdout","time":189.783920084,"data":"       FalsePositive     1615837\n"}
+,{"stream_name":"stdout","time":189.783925707,"data":"val    BenignPositive     822066\n"}
+,{"stream_name":"stdout","time":189.783931128,"data":"       TruePositive       688792\n"}
+,{"stream_name":"stdout","time":189.783936852,"data":"       FalsePositive      413727\n"}
+,{"stream_name":"stdout","time":189.783941819,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":189.79182101,"data":"Train rows: 7518371  Val rows: 1924585\n"}
+,{"stream_name":"stdout","time":191.817794902,"data":"Native categorical columns: 16 ['Category', 'EntityType', 'EvidenceRole', 'ResourceType', 'Roles', 'OSFamily', 'OSVersion', 'AntispamDirection', 'SuspicionLevel', 'LastVerdict', 'MitrePrimary', 'DetectorId', 'AlertTitle', 'CountryCode', 'State', 'City']\n"}
+,{"stream_name":"stdout","time":191.817840544,"data":"Numeric columns: ['Hour', 'DayOfWeek', 'MitreCount']\n"}
+,{"stream_name":"stdout","time":213.051746596,"data":"  OSVersion: 50 train categories, 13 val rows have a category unseen in training -\u003e treated as missing\n"}
+,{"stream_name":"stdout","time":226.377569761,"data":"  MitrePrimary: 323 train categories, 16 val rows have a category unseen in training -\u003e treated as missing\n"}
+,{"stream_name":"stdout","time":230.532846543,"data":"  DetectorId: 7350 train categories, 5513 val rows have a category unseen in training -\u003e treated as missing\n"}
+,{"stream_name":"stdout","time":235.069558625,"data":"  AlertTitle: 69123 train categories, 112090 val rows have a category unseen in training -\u003e treated as missing\n"}
+,{"stream_name":"stdout","time":239.351855325,"data":"  CountryCode: 228 train categories, 15 val rows have a category unseen in training -\u003e treated as missing\n"}
+,{"stream_name":"stdout","time":243.609220469,"data":"  State: 1318 train categories, 63 val rows have a category unseen in training -\u003e treated as missing\n"}
+,{"stream_name":"stdout","time":245.640504565,"data":"  City: 8596 train categories, 908 val rows have a category unseen in training -\u003e treated as missing\n"}
+,{"stream_name":"stdout","time":245.640548539,"data":"[  228.2s] Fit 16 categorical mappings on training data only; 118618 total val cells mapped to missing for unseen categories\n"}
+,{"stream_name":"stdout","time":246.759088922,"data":"Target classes: {'BenignPositive': 0, 'FalsePositive': 1, 'TruePositive': 2}\n"}
+,{"stream_name":"stdout","time":247.908199734,"data":"[  230.8s] X_train=(7518371, 19), X_val=(1924585, 19), n_classes=3\n"}
+,{"stream_name":"stdout","time":265.687506049,"data":"[0]\tvalidation_0-mlogloss:0.99720\tvalidation_1-mlogloss:0.99837\n"}
+,{"stream_name":"stdout","time":535.941768356,"data":"[50]\tvalidation_0-mlogloss:0.59287\tvalidation_1-mlogloss:0.58715\n"}
+,{"stream_name":"stdout","time":777.169493435,"data":"[100]\tvalidation_0-mlogloss:0.51276\tvalidation_1-mlogloss:0.50932\n"}
+,{"stream_name":"stdout","time":991.983589389,"data":"[150]\tvalidation_0-mlogloss:0.48622\tvalidation_1-mlogloss:0.48533\n"}
+,{"stream_name":"stdout","time":1187.599970472,"data":"[200]\tvalidation_0-mlogloss:0.46687\tvalidation_1-mlogloss:0.46748\n"}
+,{"stream_name":"stdout","time":1385.326164675,"data":"[250]\tvalidation_0-mlogloss:0.45982\tvalidation_1-mlogloss:0.46236\n"}
+,{"stream_name":"stdout","time":1580.831761332,"data":"[300]\tvalidation_0-mlogloss:0.45441\tvalidation_1-mlogloss:0.45825\n"}
+,{"stream_name":"stdout","time":1769.295005782,"data":"[350]\tvalidation_0-mlogloss:0.45152\tvalidation_1-mlogloss:0.45613\n"}
+,{"stream_name":"stdout","time":1960.425752149,"data":"[400]\tvalidation_0-mlogloss:0.44781\tvalidation_1-mlogloss:0.45321\n"}
+,{"stream_name":"stdout","time":2151.65292118,"data":"[450]\tvalidation_0-mlogloss:0.44407\tvalidation_1-mlogloss:0.45068\n"}
+,{"stream_name":"stdout","time":2336.100799747,"data":"[499]\tvalidation_0-mlogloss:0.44140\tvalidation_1-mlogloss:0.44905\n"}
+,{"stream_name":"stdout","time":2349.620973468,"data":"[ 2332.5s] Training done in 2101.7s via constructor (XGBClassifier(early_stopping_rounds=...)). best_iteration=499, device=None\n"}
+,{"stream_name":"stdout","time":2593.119769099,"data":"                precision    recall  f1-score   support\n"}
+,{"stream_name":"stdout","time":2593.1198618,"data":"\n"}
+,{"stream_name":"stdout","time":2593.119869497,"data":"BenignPositive       0.76      0.94      0.84    822066\n"}
+,{"stream_name":"stdout","time":2593.119874853,"data":" FalsePositive       0.90      0.60      0.72    413727\n"}
+,{"stream_name":"stdout","time":2593.119879856,"data":"  TruePositive       0.84      0.77      0.80    688792\n"}
+,{"stream_name":"stdout","time":2593.119884841,"data":"\n"}
+,{"stream_name":"stdout","time":2593.119889579,"data":"      accuracy                           0.81   1924585\n"}
+,{"stream_name":"stdout","time":2593.119894647,"data":"     macro avg       0.83      0.77      0.79   1924585\n"}
+,{"stream_name":"stdout","time":2593.119899537,"data":"  weighted avg       0.82      0.81      0.80   1924585\n"}
+,{"stream_name":"stdout","time":2593.119904895,"data":"\n"}
+,{"stream_name":"stdout","time":2593.119909624,"data":"Accuracy: 0.8062  Macro-F1: 0.7885  Weighted-F1: 0.8014\n"}
+,{"stream_name":"stdout","time":2593.119921609,"data":"Best iteration: 499  Training time: 2101.7s\n"}
+,{"stream_name":"stdout","time":2595.479497832,"data":"Top 10 features by gain:\n"}
+,{"stream_name":"stdout","time":2595.479545253,"data":"MitrePrimary      6491.272949\n"}
+,{"stream_name":"stdout","time":2595.479552078,"data":"Category          3656.680176\n"}
+,{"stream_name":"stdout","time":2595.47955721,"data":"CountryCode       2344.206055\n"}
+,{"stream_name":"stdout","time":2595.479562267,"data":"DetectorId        2141.104980\n"}
+,{"stream_name":"stdout","time":2595.479567501,"data":"EntityType        1999.329590\n"}
+,{"stream_name":"stdout","time":2595.479583411,"data":"LastVerdict       1186.089722\n"}
+,{"stream_name":"stdout","time":2595.479588294,"data":"Roles             1067.500122\n"}
+,{"stream_name":"stdout","time":2595.479593259,"data":"AlertTitle         719.297363\n"}
+,{"stream_name":"stdout","time":2595.479597855,"data":"MitreCount         685.967957\n"}
+,{"stream_name":"stdout","time":2595.479602681,"data":"SuspicionLevel     581.247986\n"}
+,{"stream_name":"stdout","time":2595.479607704,"data":"dtype: float64\n"}
+,{"stream_name":"stdout","time":2660.943368989,"data":"[ 2643.8s] Saved xgboost_model.json/.ubj/.pkl, preprocessing_info.json, xgboost_params.json, evals_result.json, results.json, classification_report.json, confusion_matrix.png, per_class_prf1.png, logloss_curve.png, feature_importance_gain.png, val_predictions.csv\n"}
+,{"stream_name":"stdout","time":2660.943541129,"data":"{\n"}
+,{"stream_name":"stdout","time":2660.94355055,"data":"  \"xgboost_version\": \"3.4.1\",\n"}
+,{"stream_name":"stdout","time":2660.943555549,"data":"  \"early_stopping_api_used\": \"constructor (XGBClassifier(early_stopping_rounds=...))\",\n"}
+,{"stream_name":"stdout","time":2660.943560565,"data":"  \"dataset_rows_after_cleaning\": 9442956,\n"}
+,{"stream_name":"stdout","time":2660.943565306,"data":"  \"train_rows\": 7518371,\n"}
+,{"stream_name":"stdout","time":2660.94356926,"data":"  \"val_rows\": 1924585,\n"}
+,{"stream_name":"stdout","time":2660.943573157,"data":"  \"n_features\": 19,\n"}
+,{"stream_name":"stdout","time":2660.943577141,"data":"  \"n_cat_features\": 16,\n"}
+,{"stream_name":"stdout","time":2660.943580952,"data":"  \"n_numeric_features\": 3,\n"}
+,{"stream_name":"stdout","time":2660.94358493,"data":"  \"training_time_seconds\": 2101.7,\n"}
+,{"stream_name":"stdout","time":2660.943588832,"data":"  \"n_estimators_requested\": 500,\n"}
+,{"stream_name":"stdout","time":2660.943592768,"data":"  \"best_iteration\": 499,\n"}
+,{"stream_name":"stdout","time":2660.943596606,"data":"  \"early_stopping_rounds\": 50,\n"}
+,{"stream_name":"stdout","time":2660.94360055,"data":"  \"tree_method\": \"hist\",\n"}
+,{"stream_name":"stdout","time":2660.943604528,"data":"  \"device_actual\": \"None\",\n"}
+,{"stream_name":"stdout","time":2660.943608729,"data":"  \"accuracy\": 0.8062,\n"}
+,{"stream_name":"stdout","time":2660.943644766,"data":"  \"macro_f1\": 0.7885,\n"}
+,{"stream_name":"stdout","time":2660.943650329,"data":"  \"weighted_f1\": 0.8014,\n"}
+,{"stream_name":"stdout","time":2660.943654643,"data":"  \"target_classes_order\": [\n"}
+,{"stream_name":"stdout","time":2660.943658824,"data":"    \"BenignPositive\",\n"}
+,{"stream_name":"stdout","time":2660.943663226,"data":"    \"FalsePositive\",\n"}
+,{"stream_name":"stdout","time":2660.943667145,"data":"    \"TruePositive\"\n"}
+,{"stream_name":"stdout","time":2660.943671065,"data":"  ]\n"}
+,{"stream_name":"stdout","time":2660.943675752,"data":"}\n"}
+,{"stream_name":"stderr","time":2668.03444248,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2668.034516256,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2668.309514176,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2668.309559543,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2669.452743016,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":2669.592074507,"data":"[NbConvertApp] Writing 307850 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":2673.074338379,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2674.006223272,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":2674.006293936,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2674.006648752,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2674.006972986,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2674.007367116,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2674.007715763,"data":"[NbConvertApp] Writing 380346 bytes to __results__.html\n"}
+]

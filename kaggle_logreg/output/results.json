@@ -1,0 +1,76 @@
+{
+  "dataset_rows_after_cleaning": 9442956,
+  "train_rows": 7518371,
+  "val_rows": 1924585,
+  "n_features_raw": 19,
+  "n_features_encoded": 539,
+  "preprocessing_fit_time_seconds": 92.3,
+  "training_time_seconds": 808.2,
+  "solver": "saga",
+  "max_iter": 100,
+  "n_iter_": [
+    100
+  ],
+  "converged": false,
+  "convergence_warnings": [
+    "The max_iter was reached which means the coef_ did not converge"
+  ],
+  "accuracy": 0.7364,
+  "macro_f1": 0.6964,
+  "weighted_f1": 0.7227,
+  "per_class_report": {
+    "BenignPositive": {
+      "precision": 0.6705402839052917,
+      "recall": 0.9517873260784414,
+      "f1-score": 0.7867852829706767,
+      "support": 822066.0
+    },
+    "FalsePositive": {
+      "precision": 0.8273937414654177,
+      "recall": 0.4188534951791882,
+      "f1-score": 0.5561605278824845,
+      "support": 413727.0
+    },
+    "TruePositive": {
+      "precision": 0.8419424558843646,
+      "recall": 0.6701819997909383,
+      "f1-score": 0.7463071927389543,
+      "support": 688792.0
+    },
+    "accuracy": 0.736438764720706,
+    "macro avg": {
+      "precision": 0.7799588270850246,
+      "recall": 0.6802742736828559,
+      "f1-score": 0.6964176678640386,
+      "support": 1924585.0
+    },
+    "weighted avg": {
+      "precision": 0.7656023130065203,
+      "recall": 0.736438764720706,
+      "f1-score": 0.7227212521405181,
+      "support": 1924585.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      782432,
+      20801,
+      18833
+    ],
+    [
+      172610,
+      173291,
+      67826
+    ],
+    [
+      211826,
+      15350,
+      461616
+    ]
+  ],
+  "target_classes_order": [
+    "BenignPositive",
+    "FalsePositive",
+    "TruePositive"
+  ]
+}

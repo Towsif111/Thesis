@@ -1,0 +1,117 @@
+{
+  "features": [
+    "Category",
+    "EntityType",
+    "EvidenceRole",
+    "ResourceType",
+    "Roles",
+    "OSFamily",
+    "OSVersion",
+    "AntispamDirection",
+    "SuspicionLevel",
+    "LastVerdict",
+    "MitrePrimary",
+    "DetectorId",
+    "AlertTitle",
+    "CountryCode",
+    "State",
+    "City",
+    "Hour",
+    "DayOfWeek",
+    "MitreCount"
+  ],
+  "cat_features": [
+    "Category",
+    "EntityType",
+    "EvidenceRole",
+    "ResourceType",
+    "Roles",
+    "OSFamily",
+    "OSVersion",
+    "AntispamDirection",
+    "SuspicionLevel",
+    "LastVerdict",
+    "MitrePrimary",
+    "DetectorId",
+    "AlertTitle",
+    "CountryCode",
+    "State",
+    "City"
+  ],
+  "numeric_features": [
+    "Hour",
+    "DayOfWeek",
+    "MitreCount"
+  ],
+  "categorical_cols_from_lightgbm": [
+    "Category",
+    "EntityType",
+    "EvidenceRole",
+    "ResourceType",
+    "Roles",
+    "OSFamily",
+    "OSVersion",
+    "AntispamDirection",
+    "SuspicionLevel",
+    "LastVerdict",
+    "MitrePrimary"
+  ],
+  "numeric_cols_from_lightgbm": [
+    "DetectorId",
+    "AlertTitle",
+    "CountryCode",
+    "State",
+    "City",
+    "Hour",
+    "DayOfWeek",
+    "MitreCount"
+  ],
+  "excluded_id_cols": [
+    "Id",
+    "AlertId",
+    "DeviceId",
+    "Sha256",
+    "IpAddress",
+    "Url",
+    "AccountSid",
+    "AccountUpn",
+    "AccountObjectId",
+    "AccountName",
+    "DeviceName",
+    "NetworkMessageId",
+    "EmailClusterId",
+    "RegistryKey",
+    "RegistryValueName",
+    "RegistryValueData",
+    "ApplicationId",
+    "ApplicationName",
+    "OAuthApplicationId",
+    "ThreatFamily",
+    "FileName",
+    "FolderPath",
+    "ResourceIdName",
+    "OrgId",
+    "IncidentId"
+  ],
+  "excluded_leakage_cols": [
+    "ActionGrouped",
+    "ActionGranular"
+  ],
+  "reviewed_kept_cols": [
+    "SuspicionLevel",
+    "LastVerdict"
+  ],
+  "reviewed_kept_cols_note": "Assumption carried over unchanged from the LightGBM notebook; prediction-time availability of these verdict columns is not re-verified here and remains an open/unresolved question.",
+  "group_cols": [
+    "OrgId",
+    "IncidentId"
+  ],
+  "target_map": {
+    "BenignPositive": 0,
+    "FalsePositive": 1,
+    "TruePositive": 2
+  },
+  "missing_value_placeholder": "Missing",
+  "reused_split_source": "guide-lightgbm-baseline/split_assignment.csv",
+  "reused_feature_audit_source": "guide-lightgbm-baseline/preprocessing_info.json"
+}

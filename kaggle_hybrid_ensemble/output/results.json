@@ -1,0 +1,114 @@
+{
+  "evaluation_set": "validation (held-out split from guide-lightgbm-baseline, NOT the official test set)",
+  "n_validation_rows": 1924585,
+  "ensemble_method": "equal-weight soft voting (average class probabilities, argmax)",
+  "weights": {
+    "lightgbm": 0.3333333333333333,
+    "catboost": 0.3333333333333333,
+    "xgboost": 0.3333333333333333
+  },
+  "class_order": [
+    "BenignPositive",
+    "FalsePositive",
+    "TruePositive"
+  ],
+  "lightgbm_prediction_time_seconds": 383.98,
+  "ensemble_combination_time_seconds": 0.1228,
+  "accuracy": 0.8173,
+  "macro_f1": 0.8013,
+  "weighted_f1": 0.8134,
+  "per_class_report": {
+    "BenignPositive": {
+      "precision": 0.773835689586554,
+      "recall": 0.9413623723642627,
+      "f1-score": 0.8494177048460567,
+      "support": 822066.0
+    },
+    "FalsePositive": {
+      "precision": 0.8913739651824345,
+      "recall": 0.6324097774619496,
+      "f1-score": 0.7398866324405414,
+      "support": 413727.0
+    },
+    "TruePositive": {
+      "precision": 0.8517624611542247,
+      "recall": 0.7803226518310317,
+      "f1-score": 0.814479020891596,
+      "support": 688792.0
+    },
+    "accuracy": 0.8173123036914451,
+    "macro avg": {
+      "precision": 0.8389907053077378,
+      "recall": 0.7846982672190813,
+      "f1-score": 0.8012611193927314,
+      "support": 1924585.0
+    },
+    "weighted avg": {
+      "precision": 0.8269921336974121,
+      "recall": 0.8173123036914451,
+      "f1-score": 0.8133676223651698,
+      "support": 1924585.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      773862,
+      18851,
+      29353
+    ],
+    [
+      87894,
+      261645,
+      64188
+    ],
+    [
+      138278,
+      13034,
+      537480
+    ]
+  ],
+  "comparison_table": [
+    {
+      "model": "LightGBM",
+      "accuracy": 0.806,
+      "macro_f1": 0.7879,
+      "weighted_f1": 0.8019,
+      "TruePositive_recall": 0.7748,
+      "source": "recomputed on aligned validation subset"
+    },
+    {
+      "model": "CatBoost",
+      "accuracy": 0.811,
+      "macro_f1": 0.7946,
+      "weighted_f1": 0.8074,
+      "TruePositive_recall": 0.7748,
+      "source": "recomputed on aligned validation subset"
+    },
+    {
+      "model": "XGBoost",
+      "accuracy": 0.8062,
+      "macro_f1": 0.7885,
+      "weighted_f1": 0.8014,
+      "TruePositive_recall": 0.7707,
+      "source": "recomputed on aligned validation subset"
+    },
+    {
+      "model": "Hybrid (soft voting)",
+      "accuracy": 0.8173,
+      "macro_f1": 0.8013,
+      "weighted_f1": 0.8134,
+      "TruePositive_recall": 0.7803,
+      "source": "recomputed on aligned validation subset"
+    },
+    {
+      "model": "Logistic Regression (reference only, non-converged)",
+      "accuracy": 0.7364,
+      "macro_f1": 0.6964,
+      "weighted_f1": 0.7227,
+      "TruePositive_recall": 0.6702,
+      "source": "reference only, from its own saved results.json (not row-level merged; no retraining)"
+    }
+  ],
+  "no_retraining_performed": true,
+  "logistic_regression_included_as_row_level_ensemble_member": false
+}

@@ -1,0 +1,6 @@
+model,accuracy,macro_f1,weighted_f1,TruePositive_recall,source
+LightGBM,0.806,0.7879,0.8019,0.7748,recomputed on aligned validation subset
+CatBoost,0.811,0.7946,0.8074,0.7748,recomputed on aligned validation subset
+XGBoost,0.8062,0.7885,0.8014,0.7707,recomputed on aligned validation subset
+Hybrid (soft voting),0.8173,0.8013,0.8134,0.7803,recomputed on aligned validation subset
+"Logistic Regression (reference only, non-converged)",0.7364,0.6964,0.7227,0.6702,"reference only, from its own saved results.json (not row-level merged; no retraining)"
